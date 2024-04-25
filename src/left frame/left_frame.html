@@ -2,12 +2,57 @@
 <html>
 <head>
   <title>COURSES</title>
+  <style>
+    /* Added CSS styles for the Courses link and hamburger icon */
+    .nav-link {
+      background-color: teal; /* Background color teal */
+      color: white; /* Text color white */
+      font-size: 125%; /* Increase link size by 25% */
+      padding: 10px 20px; /* Added padding for better click area */
+      text-decoration: none; /* Remove underline */
+      cursor: pointer;
+      display: inline-block;
+    }
+
+    .nav-link:hover {
+      background-color: #4CAF50; /* Hover color green */
+    }
+
+    .hamburger {
+      font-size: 20px;
+      cursor: pointer;
+      color: teal; /* Hamburger color teal */
+      margin-right: 10px; /* Add some space between hamburger and link */
+    }
+
+    /* Show dropdown when Courses link or hamburger is clicked */
+    .checkbox:checked ~ #coursesDropdown {
+      display: block;
+    }
+
+    /* Hide dropdown when Courses link or hamburger is not checked */
+    #coursesDropdown {
+      display: none;
+    }
+
+    /* Hide checkbox visually */
+    .checkbox {
+      display: none;
+    }
+  </style>
 </head>
 <body style="background-color: #dfdede;">
   <br>
-  <a href="./started/started.html" target="right_frame"><h3> <font face="monotype corsiva" color="brown">Getting Started with Programming</font></h3></a><br><br><br><br><br><br>
-  <a href="./frontend/frontend.html" target="right_frame"><h3><font face="monotype corsiva" color="teal">Frontend Development</font></h3></a><br><br><br><br><br><br>
-  <a href="backend.html" target="right_frame"><h3><font face="monotype corsiva" color="green">Backend Development</font></h3></a><br><br><br><br><br><br>
-  <a href="devops.html" target="right_frame"><h3><font face="monotype corsiva" color="red">Devops</font></h3></a>
+  <div>
+    <input type="checkbox" id="toggleDropdown" class="checkbox">
+    <label for="toggleDropdown" class="hamburger">&#9776;</label>
+    <label for="toggleDropdown" class="nav-link">Courses</label>
+    <div id="coursesDropdown">
+      <a href="./started/started.html" target="right_frame"><h3> <font face="monotype corsiva" color="brown">Getting Started with Programming</font></h3></a><br><br><br><br><br><br>
+      <a href="./frontend/frontend.html" target="right_frame"><h3><font face="monotype corsiva" color="teal">Frontend Development</font></h3></a><br><br><br><br><br><br>
+      <a href="backend.html" target="right_frame"><h3><font face="monotype corsiva" color="green">Backend Development</font></h3></a><br><br><br><br><br><br>
+      <a href="devops.html" target="right_frame"><h3><font face="monotype corsiva" color="red">Devops</font></h3></a>
+    </div>
+  </div>
 </body>
 </html>
